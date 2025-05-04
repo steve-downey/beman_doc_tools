@@ -1,0 +1,17 @@
+{
+  "name": "beman_doc_tools",
+  "version": "0.1.0",
+  "description": "Tools for building and publishing documentation for a Beman library.",
+  "main": null,
+  "scripts": {
+    "gen_doxyfile": "python3 gen_doxyfile.py",
+    "doxygen": "doxygen Doxyfile",
+    "moxygen": "mkdir api -p && moxygen ./xml --classes --output 'api/%s-api.md'",
+    "build_docs": "$npm_execpath run gen_doxyfile && $npm_execpath run doxygen && $npm_execpath run moxygen"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "moxygen": "^0.8.0"
+  }
+}
