@@ -6,8 +6,8 @@
   "scripts": {
     "gen_doxyfile": "python3 gen_doxyfile.py",
     "doxygen": "doxygen Doxyfile",
-    "make_api_dir": "mkdirp api",
-    "moxygen": "moxygen xml --classes --output 'api/%s-api.md'",
+    "make_api_dir": "mkdirp ../doc/api",
+    "moxygen": "moxygen xml --classes --output '../doc/api/%s-api.md'",
     "build_docs": "npm-run-all gen_doxyfile doxygen make_api_dir moxygen"
   },
   "author": "",
