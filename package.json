@@ -15,8 +15,6 @@
   "license": "MIT",
   "dependencies": {
     "docusaurus": "1.14.7",
-    "acorn": "8.14.1",
-    "acorn-walk": "8.3.4",
     "simple-git": "3.27.0",
     "create-docusaurus": "3.7.0",
     "moxygen": "0.8.0",
