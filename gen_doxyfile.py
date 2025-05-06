@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
 
+# USE: This script is intended to be run to: 1) generate Doxyfile if it does
+# not already exist, and 2) modify Doxyfile for use in the Beman doc tools,
+# whether it is a new file or not.  Some settings are enforced by this script,
+# and some are only enforced on newly-generated Doxyfiles; the latter allow
+# user edits to go unchanged when running this script on the Doxyfile any time
+# after the first.  See patterns_and_values below to see which settings are
+# which.
+
 from pathlib import Path
 import re
 import subprocess
