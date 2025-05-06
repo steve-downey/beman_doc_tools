@@ -9,7 +9,8 @@
     "make_api_dir": "mkdirp ../doc/api",
     "moxygen": "moxygen xml --classes --output '../doc/api/%s-api.md'",
     "build_api_docs": "npm-run-all gen_doxyfile doxygen make_api_dir moxygen",
-    "new_docusaurus_doc_dir": "npm init docusaurus ../doc classic"
+    "new_docusaurus_doc_dir": "npm init docusaurus ../doc classic",
+    "gen_docusaurus_config": "node gen_docusaurus_config.js docusaurus.config.js.in ../doc/docusaurus.config.js"
   },
   "author": "",
   "license": "MIT",
