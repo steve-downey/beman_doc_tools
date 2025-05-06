@@ -7,9 +7,7 @@ const fs = require("node:fs")
 const simple_git = require('simple-git')
 const git = simple_git(process.cwd())
 const path = require('path')
-const os = require('os')
 
-const username = os.userInfo().username
 const beman_url = "https://www.bemanproject.org"
 
 var git_results = {}
