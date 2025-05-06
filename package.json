@@ -10,6 +10,7 @@
     "moxygen": "moxygen xml --classes --output '../doc/api/%s-api.md'",
     "build_api_docs": "npm-run-all gen_doxyfile doxygen make_api_dir moxygen",
     "new_docusaurus_doc_dir": "npm init docusaurus ../doc classic",
+    "commit_docusaurus_doc_dir": "node commit_baseline_docusaurus_dir.js",
     "gen_docusaurus_config": "node gen_docusaurus_config.js docusaurus.config.js.in ../doc/docusaurus.config.js"
   },
   "author": "",
