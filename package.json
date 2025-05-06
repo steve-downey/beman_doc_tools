@@ -8,12 +8,17 @@
     "doxygen": "doxygen Doxyfile",
     "make_api_dir": "mkdirp ../doc/api",
     "moxygen": "moxygen xml --classes --output '../doc/api/%s-api.md'",
-    "build_docs": "npm-run-all gen_doxyfile doxygen make_api_dir moxygen"
+    "build_api_docs": "npm-run-all gen_doxyfile doxygen make_api_dir moxygen",
+    "new_docusaurus_doc_dir": "npm init docusaurus ../doc classic"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "docusaurus": "1.14.7",
+    "acorn": "8.14.1",
+    "acorn-walk": "8.3.4",
+    "simple-git": "3.27.0",
+    "create-docusaurus": "3.7.0",
     "moxygen": "0.8.0",
     "npm-run-all": "4.1.5",
     "mkdirp": "3.0.1"
