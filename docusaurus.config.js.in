@@ -61,7 +61,7 @@ const config = {
         title: "%repo_name% Beman Documentation",
         logo: {
           alt: 'Beman Logo',
-            src: 'img/logo.svg', // TODO: Use Beman dragonduck.
+          src: 'img/dragonduck.png',
         },
         items: [
           {
