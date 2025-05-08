@@ -13,7 +13,8 @@
     "build_api_docs": "npm-run-all gen_doxyfile doxygen make_api_dir moxygen rename_api_doc_files make_api_category",
     "new_docusaurus_doc_dir": "npm init docusaurus ../doc classic",
     "commit_docusaurus_doc_dir": "node commit_baseline_docusaurus_dir.js",
-    "gen_docusaurus_config": "node gen_docusaurus_config.js docusaurus.config.js.in ../doc/docusaurus.config.js"
+    "gen_docusaurus_config": "node gen_docusaurus_config.js docusaurus.config.js.in ../doc/docusaurus.config.js",
+    "copy_docusaurus_files": "python3 copy_docusaurus_files.py docusaurus_files ../doc"
   },
   "author": "",
   "license": "MIT",
