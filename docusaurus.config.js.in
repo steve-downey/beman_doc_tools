@@ -78,7 +78,7 @@ const config = {
           },
           {
             href: 'https://www.bemanproject.org',
-            label: 'GitHub',
+            label: 'Website',
             position: 'right',
           },
         ],
