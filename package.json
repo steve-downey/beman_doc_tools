@@ -6,9 +6,10 @@
   "scripts": {
     "gen_doxyfile": "python3 gen_doxyfile.py",
     "doxygen": "doxygen Doxyfile",
-    "make_api_dir": "mkdirp ../doc/api",
-    "moxygen": "moxygen xml --classes --output '../doc/api/%s-api.md'",
-    "build_api_docs": "npm-run-all gen_doxyfile doxygen make_api_dir moxygen",
+    "make_api_dir": "mkdirp ../doc/docs/api",
+    "moxygen": "moxygen xml --classes --output '../doc/docs/api/%s-api.md'",
+    "rename_api_doc_files": "python3 rename_api_doc_files.py ../doc/docs/api",
+    "build_api_docs": "npm-run-all gen_doxyfile doxygen make_api_dir moxygen rename_api_doc_files",
     "new_docusaurus_doc_dir": "npm init docusaurus ../doc classic",
     "commit_docusaurus_doc_dir": "node commit_baseline_docusaurus_dir.js",
     "gen_docusaurus_config": "node gen_docusaurus_config.js docusaurus.config.js.in ../doc/docusaurus.config.js"
