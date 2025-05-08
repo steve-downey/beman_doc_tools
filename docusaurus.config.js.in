@@ -71,6 +71,12 @@ const config = {
             label: 'Tutorial',
           },
           {
+            type: 'docSidebar',
+            sidebarId: 'apiSidebar',
+            position: 'left',
+            label: 'API',
+          },
+          {
             href: 'https://www.bemanproject.org',
             label: 'GitHub',
             position: 'right',
@@ -86,6 +92,10 @@ const config = {
               {
                 label: 'Tutorial',
                 to: '/docs/intro',
+              },
+              {
+                label: 'API',
+                to: '/docs/categpory/api',
               },
             ],
           },
