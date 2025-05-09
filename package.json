@@ -15,7 +15,8 @@
     "commit_docusaurus_doc_dir": "node commit_baseline_docusaurus_dir.js",
     "gen_docusaurus_config": "node gen_docusaurus_config.js docusaurus.config.js.in ../doc/docusaurus.config.js",
     "copy_docusaurus_files": "python3 copy_docusaurus_files.py docusaurus_files ../doc",
-    "build_starter_docusaurus_tree": "npm-run-all new_docusaurus_doc_dir commit_docusaurus_doc_dir gen_docusaurus_config copy_docusaurus_files build_api_docs"
+    "clean_up_and_commit_docusaurus_files": "node clean_up_and_commit_docusaurus_files.js",
+    "build_starter_docusaurus_tree": "npm-run-all new_docusaurus_doc_dir commit_docusaurus_doc_dir gen_docusaurus_config copy_docusaurus_files build_api_docs clean_up_and_commit_docusaurus_files"
   },
   "author": "",
   "license": "MIT",
