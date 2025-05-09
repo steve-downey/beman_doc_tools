@@ -14,7 +14,15 @@ var git_results = {}
 git.getConfig('user.name').then((user_name) => {
     git_results.user_name = user_name.value
     git.remote(['get-url', 'origin']).then((remote_url) => {
-        const repo_name = path.basename(remote_url.trim()).replace('.git', '')
+        remote_url = remote_url.trim()
+        const slash_pos = remote_url.indexOf('/')
+        var org_name = remote_url.substring(0, slash_pos)
+        const org_name_colon = org_name.indexOf(':')
+        if (0 < org_name_colon)
+            org_name = org_name.substring(org_name_colon + 1)
+        const repo_name =
+              remote_url.substring(slash_pos + 1).replace('.git', '')
+        git_results.org_name = org_name
         git_results.repo_name = repo_name
         main(git_results)
     })
@@ -41,11 +49,13 @@ function main(git_results) {
 
     const year = `${new Date().getFullYear()}`
     const user_name = git_results.user_name
+    const org_name = git_results.org_name
     const repo_name = git_results.repo_name
 
     contents = contents.
         replaceAll("%year%", year).
         replaceAll("%user_name%", user_name).
+        replaceAll("%org_name%", org_name).
         replaceAll("%repo_name%", repo_name)
 
     fs.writeFileSync(docusaurus_config_path, contents, "utf8")
