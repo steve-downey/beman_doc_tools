@@ -12,10 +12,10 @@
     "make_api_category": "python3 make_api_category.py ../doc/docs/api",
     "build_api_docs": "npm-run-all gen_doxyfile doxygen make_api_dir moxygen rename_api_doc_files make_api_category",
     "new_docusaurus_doc_dir": "npm init docusaurus ../doc classic",
-    "commit_docusaurus_doc_dir": "node commit_baseline_docusaurus_dir.js",
+    "commit_docusaurus_doc_dir": "node commit_baseline_docusaurus_dir.js ../doc",
     "gen_docusaurus_config": "node gen_docusaurus_config.js docusaurus.config.js.in ../doc/docusaurus.config.js",
     "copy_docusaurus_files": "python3 copy_docusaurus_files.py docusaurus_files ../doc",
-    "clean_up_and_commit_docusaurus_files": "node clean_up_and_commit_docusaurus_files.js",
+    "clean_up_and_commit_docusaurus_files": "node clean_up_and_commit_docusaurus_files.js ../doc",
     "build_starter_docusaurus_tree": "npm-run-all new_docusaurus_doc_dir commit_docusaurus_doc_dir gen_docusaurus_config copy_docusaurus_files build_api_docs clean_up_and_commit_docusaurus_files"
   },
   "author": "",
