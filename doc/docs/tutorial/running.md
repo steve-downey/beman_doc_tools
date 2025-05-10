@@ -36,3 +36,28 @@ in-source comments.
 cd PROJ/beman_doc_tools
 npm run build_api_docs
 ```
+
+:::tip
+
+It is possible to use custom markup in your Markdown that will get processed
+by the React layer of Docusaurus.  For instance, there is a custom markup
+called `Stdref` that you can use in your Markdown to refer to sections of the
+standard library.  The processed markup will be wrapped in brackets and link
+to https://eel.is/c++draft.  For instance, `<Stdref ref="view.interface"/>`
+will produce this link:
+\[[view_interface](https://eel.is/c++draft/view.interface)\].
+
+:::
+
+:::note
+
+The custom markups like `Stdref` don't come through Doxygen and Moxygen
+unmolested.  To preserve their formatting, you need to escape the first `<`,
+like this:
+
+```cpp
+/** My Doxygen comment refers to \<Stdref ref="view.interface"/> */
+struct foo;
+```
+
+:::
