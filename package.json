@@ -7,7 +7,7 @@
     "gen_doxyfile": "python3 gen_doxyfile.py",
     "doxygen": "doxygen Doxyfile",
     "make_api_dir": "mkdirp ../doc/docs/api",
-    "moxygen": "moxygen xml --classes --output '../doc/docs/api/%s-api.md'",
+    "moxygen": "moxygen xml --classes --output '../doc/docs/api/%s-api.mdx'",
     "rename_api_doc_files": "python3 rename_api_doc_files.py ../doc/docs/api",
     "make_api_category": "python3 make_api_category.py ../doc/docs/api",
     "build_api_docs": "npm-run-all gen_doxyfile doxygen make_api_dir moxygen rename_api_doc_files make_api_category",
@@ -16,6 +16,7 @@
     "gen_docusaurus_config": "node gen_docusaurus_config.js docusaurus.config.js.in ../doc/docusaurus.config.js",
     "copy_docusaurus_files": "python3 copy_docusaurus_files.py docusaurus_files ../doc",
     "clean_up_and_commit_docusaurus_files": "node clean_up_and_commit_docusaurus_files.js ../doc",
+    "swizzle_mdxcomponents": "npm --prefix ../doc run swizzle",
     "build_starter_docusaurus_tree": "npm-run-all new_docusaurus_doc_dir commit_docusaurus_doc_dir gen_docusaurus_config copy_docusaurus_files build_api_docs clean_up_and_commit_docusaurus_files"
   },
   "author": "",
