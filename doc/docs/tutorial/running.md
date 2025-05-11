@@ -37,19 +37,28 @@ cd PROJ/beman_doc_tools
 npm run build_api_docs
 ```
 
-:::tip
+## Custom markup
 
 It is possible to use custom markup in your Markdown that will get processed
-by the React layer of Docusaurus.  For instance, there is a custom markup
-called `Stdref` that you can use in your Markdown to refer to sections of the
-standard library.  The processed markup will be wrapped in brackets and link
-to https://eel.is/c++draft.  For instance, `<Stdref ref="view.interface"/>`
-will produce this link:
+by the React layer of Docusaurus.  Here are the custom markup tags supported
+by the tool.  Note that the rules of Docusaurus dictate that the tags all be
+captialized.
+
+### `Stdref`
+
+`Stdref` helps you refer to sections of the standard.  The processed markup
+will be wrapped in brackets and will link to https://eel.is/c++draft.  For
+example, `<Stdref ref="view.interface"/>` will be replaced with this:
 \[[view_interface](https://eel.is/c++draft/view.interface)\].
 
-:::
+### `Paper`
 
-:::note
+`Paper` helps you refer to WG21 papers.  You can refer to anything that works
+with `wg21.link`.  For example, `<Paper num="P3117"/>` will be replaced with
+this: [P3117](https://wg21.link/P3117).  Note that you can include or exclude
+the `Rn` revision number suffix, since `wg21.link` accepts either form.
+
+:::tip
 
 The custom markups like `Stdref` don't come through Doxygen and Moxygen
 unmolested.  To preserve their formatting, you need to escape the first `<`,
