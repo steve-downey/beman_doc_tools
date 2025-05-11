@@ -52,6 +52,7 @@ const adds = [
     path.join(prefix, "docs/intro.md"),
     path.join(prefix, "docusaurus.config.js"),
     path.join(prefix, "sidebars.js"),
+    path.join(prefix, "src/components/Paper.js"),
     path.join(prefix, "src/components/Stdref.js"),
     path.join(prefix, "src/components/HomepageFeatures/index.js"),
     path.join(prefix, "src/pages/index.js"),

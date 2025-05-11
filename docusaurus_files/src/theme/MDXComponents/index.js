@@ -10,6 +10,7 @@ import MDXLi from '@theme/MDXComponents/Li';
 import MDXImg from '@theme/MDXComponents/Img';
 import Admonition from '@theme/Admonition';
 import Mermaid from '@theme/Mermaid';
+import Paper from '@site/src/components/Paper';
 import Stdref from '@site/src/components/Stdref';
 const MDXComponents = {
   Head,
@@ -32,5 +33,6 @@ const MDXComponents = {
 };
 export default {
     MDXComponents,
+    Paper,
     Stdref
 };
