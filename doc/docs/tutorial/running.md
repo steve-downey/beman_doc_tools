@@ -37,6 +37,31 @@ cd PROJ/beman_doc_tools
 npm run build_api_docs
 ```
 
+:::tip
+
+When writing your Doxygen comments, you can use markdown syntax, like using
+backticks (\`) for code font.  However, if you backtick-quote a type name that
+is indexed by Doxygen, this will break the intra-API links that Doxygen
+autogenerates.  So, when documenting class `foo`, if I refer to class `bar`, I
+should do it like this:
+
+```cpp
+/** Use bar instead if you need a sorted sequence. */
+struct foo;
+```
+
+If you write this:
+
+```cpp
+/** Use `bar` instead if you need a sorted sequence. */
+struct foo;
+```
+
+... you will get the markdown link syntax, quoted directly, something like,
+`(link-text)[link-target]`.
+
+:::
+
 ## Custom markup
 
 It is possible to use custom markup in your Markdown that will get processed
