@@ -25,6 +25,8 @@ const plugin = (options = {}) => {
                 if (!(node.meta in regions)) {
                     throw Error(`error: ${vfile.path}:${node.position.start.line}: Unknown source tag '${node.meta}'.`)
                 }
+                // TODO: 1) convert tabs to 4 spaces, and 2) remove common
+                // prefix of spaces.
                 node.value = regions[node.meta].map((e) => e.text).join("\n")
             }
         });
