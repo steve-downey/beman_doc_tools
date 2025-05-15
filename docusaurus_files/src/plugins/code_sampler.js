@@ -25,9 +25,18 @@ const plugin = (options = {}) => {
                 if (!(node.meta in regions)) {
                     throw Error(`error: ${vfile.path}:${node.position.start.line}: Unknown source tag '${node.meta}'.`)
                 }
-                // TODO: 1) convert tabs to 4 spaces, and 2) remove common
-                // prefix of spaces.
-                node.value = regions[node.meta].map((e) => e.text).join("\n")
+                var lines = regions[node.meta].map(
+                    e => e.text.replace("\t", "    "))
+                const space_prefixes = lines.map((e) => {
+                    var match = e.match(/^( *)/)
+                    return match ? match[1].length : 0
+                })
+                const common_spaces = space_prefixes.reduce(
+                    (result, e) => Math.min(result, e),
+                    space_prefixes[0]
+                )
+                lines = lines.map(e => e.slice(common_spaces))
+                node.value = lines.join("\n")
             }
         });
     };
