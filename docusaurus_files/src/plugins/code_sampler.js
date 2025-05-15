@@ -41,6 +41,10 @@ const plugin = (options = {}) => {
         });
     };
 
+    // TODO: Use the implementation in
+    // https://github.com/wcoder/highlightjs-line-numbers.js to enable line
+    // numbering, and source line numbers.
+
     return transformer;
 };
 
